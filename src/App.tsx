@@ -16,7 +16,7 @@ function App() {
     <>
         <Hero setImageLoaded={setImageLoaded}/>
         <Intro imageLoaded={imageLoaded} />
-        <About imageLoaded={imageLoaded}/>
+        <About />
         <Projects/>
         <Skills/>
         <Contact/>

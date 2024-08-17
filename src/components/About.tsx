@@ -6,12 +6,12 @@ import { useRef} from 'react'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function About(props:{imageLoaded:boolean}) {
+function About() {
  
   const aboutContainer = useRef<HTMLDivElement>(null)
     
   useGSAP(()=>{
-    const aboutTl = gsap.timeline({scrollTrigger:{trigger:aboutContainer.current,
+     gsap.timeline({scrollTrigger:{trigger:aboutContainer.current,
       start:'top 10%',
       end:'+=100',
       pin:true,

@@ -22,7 +22,7 @@ function showLinks(){
   return (
     <div className='card-project'>
         <div className="image-container">
-            <img src={props.img ? props.img : Bird} alt="" onLoad={()=>ScrollTrigger.refresh()} />
+            <img src={(props.img) ? require(props.img) : Bird} alt="" onLoad={()=>ScrollTrigger.refresh()} />
         </div>
         <div className="description">
             <h3 className="project-title">

@@ -17,7 +17,7 @@ export const projects = [
       live: "https://shop-and-drop.vercel.app/",
       github: "",
     },
-    img: require("../src/assets/appscreenshots/shopanddrop.png"),
+    img: "../src/assets/appscreenshots/shopanddrop.png",
   },
   {
     name: "Moviebox",

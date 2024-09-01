@@ -4,7 +4,7 @@ export const skills = [
   "Tailwindcss",
   "Javascript",
   "Reactjs",
-  "Nodejs",
+  "Scss",
   "Git",
 ];
 
@@ -17,7 +17,7 @@ export const projects = [
       live: "https://shop-and-drop.vercel.app/",
       github: "",
     },
-    img: "../src/assets/appscreenshots/shopanddrop.png",
+    img: require("../src/assets/appscreenshots/shopanddrop.png"),
   },
   {
     name: "Moviebox",

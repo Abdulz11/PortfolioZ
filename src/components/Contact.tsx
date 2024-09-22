@@ -31,7 +31,7 @@ function Contact() {
     }
 
     useGSAP(()=>{
-        gsap.timeline({scrollTrigger:{trigger:contactRef.current,end:'40%',markers:true,onLeaveBack:()=>changeHeader()}})
+        gsap.timeline({scrollTrigger:{trigger:contactRef.current,end:'40%',onLeaveBack:()=>changeHeader()}})
     },{scope:contactRef})
 
     return (

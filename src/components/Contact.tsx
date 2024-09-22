@@ -31,7 +31,7 @@ function Contact() {
     }
 
     useGSAP(()=>{
-        gsap.timeline({scrollTrigger:{trigger:contactRef.current,end:'40%',onLeaveBack:()=>changeHeader()}})
+        gsap.timeline({scrollTrigger:{trigger:contactRef.current,end:'40%',markers:true,onLeaveBack:()=>changeHeader()}})
     },{scope:contactRef})
 
     return (
@@ -54,15 +54,21 @@ function Contact() {
                 <img src={pic} alt="profile"   />
             </div>
             <div className="links">
-                <a href="https://www.linkedin.com/in/abdul-oyewale-321523223/" className="link-div">
-                    <img src={linkedinLogo}/>
-                </a>
-                <a href="https://github.com/Abdulz11/" className="link-div">
-                    <img src={githubImage}/>
-                </a>
-                <a href="https://x.com/abdul_oyewale/" className="link-div">
-                    <img src={twitterLogo}  />
-                </a>
+                <div>
+                    <a href="https://www.linkedin.com/in/abdul-oyewale-321523223/" className="link-div">
+                        <img src={linkedinLogo}/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://github.com/Abdulz11/" className="link-div">
+                        <img src={githubImage}/>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://x.com/abdul_oyewale/" className="link-div">
+                        <img src={twitterLogo}/>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

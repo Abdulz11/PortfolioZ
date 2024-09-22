@@ -1,13 +1,21 @@
+import shopanddropimg from "../assets/appscreenshots/shopanddrop.png";
+import movieBox from "../assets/appscreenshots/moviebox.png";
+import oceanImg from "../assets/appscreenshots/ocean.png";
+import movieMadness from "../assets/appscreenshots/moviemadness.png";
+import hotWheels from "../assets/appscreenshots/carshowcase.png";
+import tetris from "../assets/appscreenshots/tetris.png";
+
 export const skills = [
   "Redux",
   "Nextjs",
   "Tailwindcss",
   "Javascript",
   "Reactjs",
-  "Nodejs",
+  "Html",
+  "Css",
+  "Sass",
   "Git",
 ];
-
 export const projects = [
   {
     name: "Shop & Drop",
@@ -17,7 +25,7 @@ export const projects = [
       live: "https://shop-and-drop.vercel.app/",
       github: "",
     },
-    img: "../src/assets/appscreenshots/shopanddrop.png",
+    img: shopanddropimg,
   },
   {
     name: "Moviebox",
@@ -27,7 +35,7 @@ export const projects = [
       live: "https://moviebox-eosin.vercel.app/",
       github: "",
     },
-    img: "../src/assets/appscreenshots/moviebox.png",
+    img: movieBox,
   },
   {
     name: "Ocean",
@@ -37,7 +45,7 @@ export const projects = [
       live: "https://ocean-animated.netlify.app/",
       github: "",
     },
-    img: "../src/assets/appscreenshots/ocean.png",
+    img: oceanImg,
   },
   {
     name: "Elles kitchen",
@@ -57,7 +65,7 @@ export const projects = [
       live: "https://abdulzmoviemadness.netlify.app/",
       github: "",
     },
-    img: "../src/assets/appscreenshots/moviemadness.png",
+    img: movieMadness,
   },
   {
     name: "Blog app",
@@ -72,7 +80,7 @@ export const projects = [
       live: "https://abdulztetris.netlify.app/",
       github: "",
     },
-    img: "../src/assets/appscreenshots/tetris.png",
+    img: tetris,
   },
   {
     name: "Hot wheels",
@@ -82,9 +90,10 @@ export const projects = [
       live: "https://hotwheels-car-showcase-app.vercel.app/",
       github: "",
     },
-    img: "../src/assets/appscreenshots/carshowcase.png",
+    img: hotWheels,
   },
 ];
+
 export const aboutMe = {
   title: "About",
   comment:

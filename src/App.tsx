@@ -13,15 +13,15 @@ function App() {
     const [imageLoaded,setImageLoaded] = useState(false)
   
  return(
-    <>
-        <Hero setImageLoaded={setImageLoaded}/>
+    <div className='root-container'>
+        <Hero setImageLoaded={setImageLoaded} />
         <Intro imageLoaded={imageLoaded} />
         <About />
         <Projects/>
         <Skills/>
         <Contact/>
         <Footer/>
-    </>
+    </div>
  )
 }
 

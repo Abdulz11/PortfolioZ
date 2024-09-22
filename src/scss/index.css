@@ -1,3 +1,7 @@
+html {
+  scroll-padding: 80px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,7 +13,6 @@ body {
   position: relative;
   margin: 0px auto;
   width: 95vw;
-  overflow-x: hidden;
   color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -44,6 +47,7 @@ nav {
 }
 nav h2 {
   font-size: 30px;
+  font-weight: bolder;
 }
 nav .nav-inner-container {
   max-width: 1100px;
@@ -107,6 +111,7 @@ nav .nav-inner-container .link-container a {
   margin: 5rem 0rem;
   font-family: "Syncopate", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   border-top: 2px solid #83c4f2;
+  height: 120vh;
 }
 
 .intro-div {
@@ -237,12 +242,20 @@ nav .nav-inner-container .link-container a {
   display: grid;
   place-items: center;
 }
+.check-out-proj-div > div {
+  padding-top: 70px;
+}
 
 .overall-project-div {
   display: flex;
   margin-top: 30px;
   justify-content: center;
   align-items: center;
+}
+.overall-project-div .btn-slide-left, .overall-project-div .btn-slide-right {
+  cursor: pointer;
+  width: 70px;
+  background-color: white;
 }
 .overall-project-div .project-container {
   width: 90vw;
@@ -288,10 +301,8 @@ nav .nav-inner-container .link-container a {
   margin: auto;
   width: 80%;
 }
-.card-project .project-link-div {
-  color: black;
-}
 .card-project .project-link-div > div {
+  color: black;
   padding: 10px;
   border-top: 2px solid grey;
   height: 50px;
@@ -403,11 +414,10 @@ nav .nav-inner-container .link-container a {
   position: relative;
   mask-image: url(/src/assets/zletter.svg);
   -webkit-mask-image: url(/src/assets/zletter.svg);
-  -webkit-mask-size: 100%;
   position: absolute;
-  top: 0%;
   left: 40%;
   width: 300px;
+  -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-position: -20px 80px;
           mask-position: -20px 80px;
@@ -432,4 +442,314 @@ nav .nav-inner-container .link-container a {
 
 .text-anim {
   display: inline-block;
+}
+
+@media (max-width: 320px) {
+  body {
+    width: 100vw;
+  }
+  .root-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  nav {
+    width: 100vw;
+    margin: 0px auto;
+    display: none;
+    position: fixed;
+    padding: 18px 20px;
+    z-index: 10;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  nav h2 {
+    font-size: 20px;
+  }
+  nav .nav-inner-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  nav .nav-inner-container .link-container {
+    display: flex;
+    gap: 30px;
+  }
+  nav .nav-inner-container .link-container a {
+    font-size: 13px;
+  }
+  .hero-container {
+    height: 90vh;
+    padding: 30% 10px;
+    width: 100vw;
+    margin: 20px 0.5rem;
+  }
+  .hero-container .text {
+    left: 15px;
+  }
+  .hero-container .text .title-hero-span {
+    font-size: 32px;
+  }
+  .introcontainer-section {
+    width: 100vw;
+  }
+  .intro-div {
+    flex-direction: column-reverse;
+    gap: 40px;
+    width: 100%;
+    padding-left: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  .intro-div .intro-img-overlay {
+    background-color: transparent;
+  }
+  .intro-div .img-div {
+    width: 60%;
+    overflow: hidden;
+    position: relative;
+    height: 10rem;
+    border-radius: 20px;
+  }
+  .intro-div .text {
+    flex-grow: 0;
+    padding-left: 20px;
+  }
+  .intro-div .text :nth-child(1) {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .intro-div .text :nth-child(2) {
+    font-size: 33px;
+  }
+  .intro-div .text :nth-child(3) {
+    font-size: 33px;
+    margin: 15px;
+  }
+  .intro-div .text .intro-name-container {
+    position: relative;
+    height: 65px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .intro-div .text .intro-name-span {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+  .intro-div .text .intro-name-span h1 {
+    font-size: 50px;
+  }
+  .intro-div .text .strikethrough-span {
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: 0px;
+    width: 100%;
+    height: 7px;
+  }
+  .parallel-effect-div {
+    width: 100vw;
+    height: 30vh;
+    background-attachment: fixed;
+    background-image: url(/src/assets/profilepic2.jpeg);
+    background-position: 0% 50%;
+    background-size: 100%;
+  }
+  .about-section {
+    margin-top: 10px;
+  }
+  .about-div {
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 3rem;
+    padding: 1rem 30px;
+    align-items: center;
+  }
+  .about-div h1 {
+    font-size: 30px;
+    padding: 20px 0px;
+  }
+  .about-div .text {
+    width: 100%;
+  }
+  .about-div .text p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .project-section {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+  }
+  .check-out-proj-div {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 2rem;
+    height: 5rem;
+  }
+  .check-out-proj-div .text-anim:last-child {
+    display: flex;
+    justify-content: center;
+  }
+  .check-out-proj-div > div {
+    padding-top: 20px;
+  }
+  .check-out-proj-div .text-anim img {
+    width: 30%;
+  }
+  .overall-project-div {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .overall-project-div .btn-slide-left, .overall-project-div .btn-slide-right {
+    width: 30px;
+  }
+  .card-project {
+    width: 30%;
+    padding: 5px;
+  }
+  .card-project .description {
+    padding: 5px;
+  }
+  .card-project .description h3 {
+    font-size: 10px;
+  }
+  .card-project .description p {
+    font-size: 10px;
+  }
+  .card-project .btn-div {
+    width: 100%;
+  }
+  .card-project .btn-div > a {
+    padding: 8px 10px;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    background-color: #83c4f2;
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+  .card-project .project-link-div {
+    width: 100%;
+  }
+  .card-project .project-link-div > div {
+    padding: 10px 0px;
+    border-top: 2px solid grey;
+    height: 30px;
+    width: 50%;
+  }
+  .card-project .project-link-div > div a {
+    font-size: 10px;
+    width: 90%;
+  }
+  .skills-div {
+    width: 90vw;
+  }
+  .skills-div h1 {
+    font-size: 27px;
+  }
+  .skills-div .banner-div {
+    border-bottom: 2px solid #83c4f2;
+  }
+  .skill-banner {
+    border: none;
+  }
+  .skill-banner span {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  .contact-div {
+    flex-direction: column;
+    width: 100vw;
+    gap: 130px;
+  }
+  .contact-div .side-nav {
+    display: none;
+  }
+  .contact-div .title {
+    min-width: 65%;
+    height: 10rem;
+  }
+  .contact-div .title h1 {
+    font-size: 50px;
+  }
+  .contact-div .changing-heading {
+    position: relative;
+    min-width: 100%;
+    height: 39%;
+  }
+  .contact-div .changing-heading #contactText {
+    text-align: center;
+  }
+  .contact-div .changing-heading h1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+  .contact-div .masked-div {
+    -webkit-mask-image: url(/src/assets/zletter.svg);
+    mask-image: url(/src/assets/zletter.svg);
+    -webkit-mask-size: 50%;
+    mask-size: 50%;
+    position: relative;
+    left: 30%;
+    height: 200px;
+    width: 100%;
+    -webkit-mask-position: -20px 45px;
+            mask-position: -20px 45px;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+  .contact-div .links {
+    margin: auto;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact-div .links > div {
+    overflow: hidden;
+    border-radius: 15px;
+    width: 30%;
+  }
+  .contact-div .links img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .contact-div .links a {
+    width: 100%;
+    height: 100%;
+  }
+  .footer-div {
+    width: 100vw;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    background-color: red;
+  }
+  .hero-container .text {
+    left: 21%;
+  }
+  .hero-container .text .title-her-span {
+    font-size: 37px;
+  }
+  .card-project {
+    width: 37%;
+  }
+  .masked-div {
+    -webkit-mask-size: 44%;
+    mask-size: 44%;
+  }
 }/*# sourceMappingURL=index.css.map */

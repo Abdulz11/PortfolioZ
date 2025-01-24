@@ -10,7 +10,7 @@ export default function LoaderPage() {
          gsap.set(el,{overflow:'hidden'}) 
           const mainLoaderTl = gsap.timeline({delay:1.3})
           mainLoaderTl
-            .to('.counter-units',{y:-100*18.8,duration:2.7,ease:'sine.inOut'})
+            .to('.counter-units',{y:-100*18.43,duration:2.7,ease:'sine.inOut'})
             .to('.counter-tens',{y:-100*9.43,duration:3,ease:'power3.inOut'},"0.2")
             .to('.counter-hundreds',{y:-100,duration:3.6,ease:'power3.inOut'},'<')
             .to('.line-content',{width:"100%",duration:2})

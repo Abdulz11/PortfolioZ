@@ -7,21 +7,26 @@ import Contact from "./components/Contact"
 import { useState } from "react"
 import Footer from "./components/Footer"
 import Intro from "./components/Intro"
+import LoaderPage from "./components/LoaderPage"
 
 
 function App() {
     const [imageLoaded,setImageLoaded] = useState(false)
   
  return(
-    <div className='root-container'>
-        <Hero setImageLoaded={setImageLoaded} />
-        <Intro imageLoaded={imageLoaded} />
-        <About />
-        <Projects/>
-        <Skills/>
-        <Contact/>
-        <Footer/>
-    </div>
+    <>
+        <LoaderPage />
+        <div className='root-container'>
+            <Hero setImageLoaded={setImageLoaded} />
+            <Intro imageLoaded={imageLoaded} />
+            <About />
+            <Projects/>
+            <Skills/>
+            <Contact/>
+            <Footer/>
+        </div>
+    </>
+   
  )
 }
 

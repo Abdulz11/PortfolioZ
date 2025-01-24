@@ -6,6 +6,11 @@ import hotWheels from "../assets/appscreenshots/carshowcase.png";
 import tetris from "../assets/appscreenshots/tetris.png";
 
 export const skills = [
+  "Html",
+  "Css",
+  "Zustand",
+  "Bootsrap",
+  "Material UI",
   "Redux",
   "Nextjs",
   "Tailwindcss",

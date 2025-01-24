@@ -4,6 +4,7 @@ import oceanImg from "../assets/appscreenshots/ocean.png";
 import movieMadness from "../assets/appscreenshots/moviemadness.png";
 import hotWheels from "../assets/appscreenshots/carshowcase.png";
 import tetris from "../assets/appscreenshots/tetris.png";
+import elleskitchen from "../assets/appscreenshots/elleskitchen.png";
 
 export const skills = [
   "Html",
@@ -58,7 +59,7 @@ export const projects = [
       live: "https://elleskitchen.netlify.app/",
       github: "",
     },
-    img: "",
+    img: elleskitchen,
   },
   {
     name: "MovieMadness",

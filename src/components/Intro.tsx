@@ -44,7 +44,6 @@ function Intro(props:{imageLoaded:boolean}) {
         // end only at 350px
         scrub:1,
         pin:true,
-        markers:true,
         pinSpacing:true,
 
         }

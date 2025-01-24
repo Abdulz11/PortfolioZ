@@ -494,10 +494,11 @@ nav .nav-inner-container .link-container a {
   display: inline-block;
 }
 
-@media (max-width: 320px) {
+/* MEDIA QUERIES */
+/* @media (max-width: 400px) {
   body {
     width: 100vw;
-  }
+    }
   .root-container {
     max-width: 100%;
     display: flex;
@@ -523,6 +524,9 @@ nav .nav-inner-container .link-container a {
   nav .nav-inner-container {
     max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   nav .nav-inner-container .link-container {
     display: flex;
@@ -537,11 +541,11 @@ nav .nav-inner-container .link-container a {
     width: 100vw;
     margin: 20px 0.5rem;
   }
-  .hero-container .text {
-    left: 15px;
+  .text {
+    left: 21%;
   }
-  .hero-container .text .title-hero-span {
-    font-size: 32px;
+  .text .title-hero-span {
+    font-size: 37px;
   }
   .introcontainer-section {
     width: 100vw;

@@ -14,7 +14,7 @@ function App() {
   
  return(
     <>
-        {/* <LoaderPage /> */}
+        <LoaderPage />
          <div className='root-container'> 
             <Hero setImageLoaded={setImageLoaded} imageLoaded={imageLoaded}/>
             <Intro imageLoaded={imageLoaded} /> 

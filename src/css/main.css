@@ -96,6 +96,7 @@ nav .nav-inner-container .link-container a {
   width: 100%;
   overflow: hidden;
   height: 100vh;
+  height: 100dvh;
   z-index: 100;
   position: absolute;
   top: 0;
@@ -737,7 +738,7 @@ nav .nav-inner-container .link-container a {
 .contact-div .masked-div {
   width: 40%;
   position: relative;
-  max-height: 500px;
+  max-height: 900px;
 }
 .contact-div .masked-div img {
   mask-image: url(/src/assets/zletter.svg);

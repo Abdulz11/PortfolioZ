@@ -394,7 +394,7 @@ nav .nav-inner-container .link-container a {
   }
   .intro-div .text .intro-name-div h1,
   .intro-div .text .intro-name-div .name-absolute {
-    font-size: 50px;
+    font-size: 35px;
   }
 }
 @media (max-width: 400px) {

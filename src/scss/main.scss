@@ -1,0 +1,10 @@
+@use "./variables.scss" as *;
+@use "./index.scss";
+@use "../components/Navbar/navbar.scss";
+@use "../components/LoaderPage/loader.scss";
+@use "../components/Hero/hero.scss";
+@use "../components/Intro/intro.scss";
+@use "../components/About/about.scss";
+@use "../components/Projects/projects.scss";
+@use "../components/Skills/skills.scss";
+@use "../components/Contact/contact.scss";

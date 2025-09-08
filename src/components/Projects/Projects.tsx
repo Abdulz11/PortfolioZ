@@ -1,53 +1,52 @@
 import { useRef, useState } from "react"
-import CardProject from "./CardProject"
-import leftArrow from '../assets/left-arrow-svgrepo-com (1).svg'
-import rightArrow from '../assets/right-arrow-svgrepo-com (1).svg'
-import downArrow from '../assets/downarrow.svg' 
-// import arrowDown from '../assets/arrowdown.png'
-import { seeProjectsText } from "../constants/constant"
+import CardProject from "../CardProject"
+import leftArrow from '../../assets/left-arrow-svgrepo-com (1).svg'
+import rightArrow from '../../assets/right-arrow-svgrepo-com (1).svg'
+import downArrow from '../../assets/downarrow.svg' 
+import { seeProjectsText } from "../../constants/constant"
 import gsap from 'gsap'
 import { useGSAP } from "@gsap/react"
-import { projects } from "../constants/constant"
+import { projects } from "../../constants/constant"
+// import './projects.css'
+
 
 function Projects() {
   const [slide,setSlide] = useState(0)
-  // const [slidingWidth,setSlidingWidth] = useState(500)
   const projectContainer = useRef<null | HTMLDivElement>(null)
-
   function handleRight(){
-    // getSlidingWidth()
     if(checkLastSlide())return
     setSlide(prev=>prev - 1)
+    
   }
 
   function handleLeft(){
-    // getSlidingWidth()
     if(slide === 0) return
     setSlide(prev=>prev + 1)
   }
   function getSlidingWidth(){
-    let windowWidth = window.innerWidth;
-    // console.log(windowWidth)
-    if(windowWidth == 320){
-      return 283
-    }
-    else if(windowWidth == 375){
-      return 344
-    }
-    else{
-      return 500
-    }
+    const projectContainer = document.querySelector('.overall-project-div')
+    const slide = document.querySelector('.slide')
+    const scrollWidth = projectContainer?.getBoundingClientRect().width;
+   
+    return scrollWidth ? scrollWidth - 70 : 100
+    
+   
   }
 
   function checkLastSlide(){
-    const container = document.querySelector('.project-container')
-    const slide = document.querySelector('.slide')
-    const containerEdge = container?.getBoundingClientRect().right
+    const projectContainer = document.querySelector('.overall-project-div');
+
+    const slide = document.querySelector('.slide');
+
+    const scrollWidth = projectContainer?.getBoundingClientRect().width
+    const projectContainerEdge = projectContainer?.getBoundingClientRect().right
     const slideEdge = slide?.getBoundingClientRect().right
-    if(slideEdge && containerEdge){
-      return slideEdge < containerEdge 
+    
+    if(slideEdge && projectContainerEdge){
+      return slideEdge < projectContainerEdge 
     }
   }
+  checkLastSlide()
 
   useGSAP(()=>{
    gsap.from('.text-anim',{opacity:0.06,scrollTrigger:{trigger:'.check-out-proj-div',start:'top center',end:'bottom center',scrub:1,onRefresh:()=>getSlidingWidth()},stagger:0.07})
@@ -57,10 +56,19 @@ function Projects() {
   return (
     <div className="project-section" ref={projectContainer} id='projects'>
       <div className="check-out-proj-div">
-        <h3>
-          {seeProjectsText.split('').map((text,i)=><span className="text-anim" style={{minWidth:'10px',minHeight:'10px'}} key={i}>{text}</span>)}
-        </h3>
-        <div className="text-anim" ><img src={downArrow} alt="downarrow" /></div>
+        <div className="text-container">
+          {seeProjectsText.split(' ')
+          .map((text,i)=>
+          (<div key={text}>
+            {
+              text.split('').map((text,i)=><span className="text-anim" key={i}>{text}</span>)
+            } 
+            </div>
+          )
+        )}
+        
+        </div>
+        <div className="text-anim down-arrow" ><img src={downArrow} alt="downarrow" /></div>
       </div>
       <div className="overall-project-div">
         <div  className="btn-slide-left"onClick={()=>handleLeft()}>

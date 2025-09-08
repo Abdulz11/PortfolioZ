@@ -1,0 +1,50 @@
+@import "../../scss/variables.scss";
+
+nav {
+  width: 95vw;
+  margin: 0px auto;
+  display: none;
+  position: fixed;
+  padding: 18px 20px;
+  z-index: 10;
+  background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  h2 {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .nav-inner-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    @extend %flex;
+    .link-container {
+      display: flex;
+      gap: 30px;
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}
+// media queries
+
+@media (max-width: 375px) {
+  nav {
+    padding: 10px 20px;
+  }
+
+  nav .nav-inner-container .link-container a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 320px) {
+  nav {
+    padding: 5px 20px;
+  }
+  nav .nav-inner-container .link-container a {
+    font-size: 13px;
+  }
+}

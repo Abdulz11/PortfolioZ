@@ -8,8 +8,12 @@ gsap.registerPlugin(ScrollTrigger)
 function SkillBanner() {
  
   useGSAP(()=>{
-   
-    const anim = gsap.to('.skill-banner',{scrolltrigger:{trigger:'.skill-banner'},xPercent:-49.2,repeat:-1,duration:20,ease:'linear'})
+    const skillsBanner = document.querySelector('.skill-banner')
+    const lengthOfBanner = skillsBanner?.getBoundingClientRect().width as number
+    const percentOfLength = (lengthOfBanner/2)/lengthOfBanner * (100)
+
+    // console.log(skillsBanner)
+    const anim = gsap.to('.skill-banner',{scrolltrigger:{trigger:'.skill-banner'},xPercent: `-${percentOfLength}`,x:20,repeat:-1,duration:20,ease:'linear'})
     
   })
 

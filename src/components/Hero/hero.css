@@ -1,0 +1,67 @@
+.absolute-div {
+  position: relative;
+}
+
+.hero-container {
+  margin: 20px auto;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.hero-container .hero-image-div {
+  width: 50%;
+  position: relative;
+}
+.hero-container .text {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero-container .text .title-hero-span {
+  font-size: 46px;
+}
+.hero-container .text .title-hero-span:nth-child(1) {
+  color: transparent;
+  cursor: pointer;
+  -webkit-text-stroke: 1px white;
+  position: relative;
+}
+.hero-container .text .title-hero-span:nth-child(1):hover:before {
+  width: 100%;
+}
+.hero-container .text .title-hero-span:nth-child(1)::before {
+  content: "Frontend";
+  position: absolute;
+  cursor: pointer;
+  -webkit-text-stroke: 0px;
+  display: inline-block;
+  width: 0%;
+  overflow: hidden;
+  left: 0px;
+  transition: width 0.5s ease;
+}
+
+@media (max-width: 500px) {
+  .hero-container .text .title-hero-span {
+    font-size: 32px;
+  }
+}
+@media (max-width: 400px) {
+  .hero-container .hero-image-div {
+    width: 90%;
+  }
+  .hero-container .text .title-hero-span {
+    font-size: 32px;
+  }
+}
+@media (max-width: 320px) {
+  .hero-container .hero-image-div {
+    width: 100%;
+  }
+  .hero-container .text .title-hero-span {
+    font-size: 20px;
+  }
+}

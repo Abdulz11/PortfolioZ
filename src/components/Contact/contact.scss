@@ -1,0 +1,114 @@
+@import "../../scss/variables.scss";
+// CONTACT
+.contact-div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10rem;
+  // gap: 100px;
+  border: 2px solid red;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  .side-nav {
+    span {
+      display: inline-block;
+      margin: 0px 30px;
+    }
+    font-weight: 200;
+    top: 0;
+    left: 0;
+    transform-origin: left bottom;
+    transform: rotate(90deg) translateX(-20px);
+    position: absolute;
+    font-size: 13px;
+    font-family: Roboto Mono, Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .title {
+    // align-self: center;
+    font-size: 3rem;
+    min-width: 20%;
+    h1 {
+      font-size: 60px;
+    }
+  }
+  .changing-heading {
+    position: relative;
+    #contactText {
+      display: none;
+    }
+    h1 {
+      position: absolute;
+      top: -140px;
+      left: 0;
+    }
+  }
+
+  .links {
+    width: 15%;
+    img {
+      border-radius: 15px;
+    }
+    a {
+      display: inline-block;
+      background-color: white;
+      &:nth-child(1),
+      &:nth-child(2) {
+        padding: 8px;
+      }
+    }
+  }
+  .masked-div {
+    width: 40%;
+    position: relative;
+    max-height: 500px;
+    // border: 2px solid green;
+    img {
+      mask-image: url(/src/assets/zletter.svg);
+      -webkit-mask-image: url(/src/assets/zletter.svg);
+      mask-size: 100%;
+      -webkit-mask-size: 100%;
+      mask-position: -20px 80px;
+      -webkit-mask-position: -20px 80px;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+    }
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+// media
+@media (max-width: 600px) {
+  .contact-div {
+    flex-direction: column;
+    gap: 130px;
+  }
+  .contact-div .side-nav {
+    display: none;
+  }
+  .contact-div .title {
+    width: 100%;
+    text-align: center;
+  }
+  .contact-div .links {
+    transform: rotate(-90deg);
+    a {
+      transform: rotate(90deg) translateX(10px);
+    }
+  }
+  .contact-div .masked-div {
+    max-height: 800px;
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .contact-div .masked-div {
+    max-height: 500px;
+  }
+}

@@ -11,7 +11,8 @@ export const skills = [
   "Css",
   "Zustand",
   "Bootsrap",
-  "Material UI",
+  // "Material UI",
+  "Node",
   "Redux",
   "Nextjs",
   "Tailwindcss",
@@ -104,4 +105,4 @@ export const aboutMe = {
     "Im a passionate Frontend Developer dedicated to crafting intuitive and visually appealing user interfaces. With a strong foundation in HTML, CSS, JavaScript, and frontend frameworks like Reactjs. I specialize in creating web applications that provide seamless and engaging user experiences.As a junior developer, I thrive in collaborative environments where I can work closely with designers and developers to transform wireframes and mockups into high-quality, functional web pages. My commitment to continuous learning drives me to stay updated with the latest industry trends and technologies, always seeking opportunities to enhance my skills.Im excited to contribute to innovative projects and grow as part of a dynamic team. Thank you for visiting my portfolio. I look forward to exploring potential opportunities and making impactful contributions!",
 };
 
-export const seeProjectsText = "Check out some of my projects ";
+export const seeProjectsText = "Check out some of my projects";

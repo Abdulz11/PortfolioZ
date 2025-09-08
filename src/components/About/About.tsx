@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import {aboutMe} from '../constants/constant'
+import {aboutMe} from '../../constants/constant'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import { useRef} from 'react'
 
@@ -11,19 +11,9 @@ function About() {
   const aboutContainer = useRef<HTMLDivElement>(null)
     
   useGSAP(()=>{
-     gsap.timeline({scrollTrigger:{trigger:aboutContainer.current,
-      start:'top 10%',
-      end:'+=100',
-      pin:true,
-      onLeave:(self)=>{
-        self.disable()
-        self.scroll(self.start);	
-        ScrollTrigger.refresh()
-      }
-    }})
-    .pause()
-   .from('.about-section h1 span',{y:400,stagger:0.09,})
-   .from('.about-section p span',{y:600,stagger:0.09,},'<+=0.3')
+    gsap.timeline({scrollTrigger:{trigger:aboutContainer.current,start:'top 50%',}})
+    .from('.about-section h1 span',{y:400,stagger:0.09,})
+    .from('.about-section p span',{y:600,stagger:0.09,},'<+=0.3')
    
   },{scope:aboutContainer})
 

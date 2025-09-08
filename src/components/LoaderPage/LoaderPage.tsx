@@ -2,23 +2,35 @@ import { useGSAP } from "@gsap/react"
 import gsap from 'gsap'
 
 
+
 export default function LoaderPage() {
     useGSAP(()=>{
-          // initial animation 
-         let el =  document.querySelector('body')
-         console.log(el)
-         gsap.set(el,{overflow:'hidden'}) 
+        // initial animation 
+        const bodyElement =  document.querySelector('body');
+        const counterDiv = document.querySelector('.counter-div')!;
+        const mainLoaderContent = document.querySelector('.main-loader-content')!
+        const screenWidth = document.documentElement.clientWidth
+        const getPercentageXTransition = screenWidth - mainLoaderContent.getBoundingClientRect().width
+        const spanElementHeight = counterDiv?.getBoundingClientRect().height
+        gsap.set(`.counter-div span`,{height:`${spanElementHeight}`})
+        gsap.set(bodyElement,{overflow:'hidden'}) 
+        console.log(spanElementHeight)
+        
+
+       
+
+
           const mainLoaderTl = gsap.timeline({delay:1.3})
           mainLoaderTl
-            .to('.counter-units',{y:-100*18.7,duration:2.7,ease:'sine.inOut'})
-            .to('.counter-tens',{y:-100*9.43,duration:3,ease:'power3.inOut'},"0.2")
-            .to('.counter-hundreds',{y:-100,duration:3.6,ease:'power3.inOut'},'<')
+            .to('.counter-units',{y:`-${spanElementHeight * 20}`,duration:2.7,ease:'sine.inOut'})
+            .to('.counter-tens',{y:`-${spanElementHeight * 10}`,duration:3,ease:'power3.inOut'},"0.2")
+            .to('.counter-hundreds',{y:`-${spanElementHeight * 1}`,duration:3.6,ease:'power3.inOut'},'<')
             .to('.line-content',{width:"100%",duration:2})
             .to('.main-loader-content',{x:"0",duration:2},"<")
-            .to('.main-loader-content',{x:"-500",duration:0.5,delay:1,ease:'power4.in'})
+            .to('.main-loader-content',{x:`-${getPercentageXTransition}`,duration:0.5,delay:1,ease:'power2.in'})
             .to('.main-loader',{height:0},'+=1')
-            .to(el,{overflow:'auto'},'<')
-       
+            .to('.main-loader',{display:'none'},'+=1')
+            .to(bodyElement,{overflow:'auto'},'<')
         })
 
   return (

@@ -45,7 +45,6 @@ function showLinks(){
                 </div>
             </div>
             }
-            
         </div>
     </div>
   )

@@ -1,11 +1,12 @@
 import { useGSAP } from '@gsap/react'
-// import logoImage from '../assets/sangaa-21.jpg'
+// import './navbar.css'
 import { forwardRef, LegacyRef } from 'react'
+
 
 const Navbar = forwardRef(function Navbar(props,ref:LegacyRef<HTMLElement> | undefined) {
 
   // useGSAP(()=>{
-  //   const navbarTl = gsap.timeline({scrollTrigger:{trigger:navRef.current}})
+  //   const navbarTl = gsap.timeline({scrollTrigger:{trigger:ref}})
   //   gsap.from('.link-container a',{y:-100,opacity:0})
   // })
 

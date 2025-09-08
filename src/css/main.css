@@ -684,7 +684,6 @@ nav .nav-inner-container .link-container a {
   display: flex;
   justify-content: space-around;
   margin-top: 10rem;
-  border: 2px solid red;
   position: relative;
   align-items: center;
   overflow: hidden;

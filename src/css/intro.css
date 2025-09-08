@@ -1,0 +1,191 @@
+.introcontainer-section {
+  margin: 5rem 0rem;
+  font-family: "Syncopate", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  border-top: 2px solid #83c4f2;
+  padding-bottom: 3rem;
+}
+
+.intro-div {
+  position: relative;
+  min-height: 80vh;
+  align-items: center;
+  display: flex;
+}
+.intro-div .img-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.intro-div .intro-img-overlay {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+}
+.intro-div .img-div {
+  width: 30%;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  border-radius: 20px;
+}
+.intro-div .img-div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.intro-div .text {
+  flex-grow: 2;
+  padding-left: 20px;
+}
+.intro-div .text .intro-name-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.intro-div .text .intro-name-div {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.intro-div .text .intro-name-div h1,
+.intro-div .text .intro-name-div .name-absolute {
+  font-size: 80px;
+}
+.intro-div .text .strikethrough-span {
+  display: inline-block;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%);
+  width: 60%;
+  height: 10px;
+}
+
+.intro-div .text {
+  text-align: center;
+}
+.intro-div .text > h1:nth-child(1) {
+  font-size: 120px;
+  margin-bottom: 20px;
+}
+.intro-div .text > h1:nth-child(2) {
+  font-size: 75px;
+  margin-bottom: 10px;
+}
+.intro-div .text > h1:nth-child(3) {
+  font-size: 75px;
+}
+
+.name-absolute {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.parallel-effect-div {
+  border-radius: 50px;
+  padding-bottom: 10rem;
+  width: 100%;
+  height: 95vh;
+  background-attachment: fixed;
+  background-image: url(/src/assets/profilepic2.jpeg);
+  background-position: 50% 33%;
+  background-size: auto;
+  position: relative;
+}
+.parallel-effect-div .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 800px) {
+  .introcontainer-section {
+    height: auto;
+  }
+  .intro-div {
+    flex-direction: column-reverse;
+    gap: 40px;
+    width: 100%;
+    padding-left: 0px;
+    justify-content: center;
+  }
+  .intro-div .img-div {
+    width: 60%;
+  }
+  .intro-div .text {
+    width: 100%;
+    padding-left: 0;
+  }
+  .intro-div .text h1 > h1:nth-child(1) {
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+  .intro-div .text h1 > h1:nth-child(2) {
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+  .intro-div .text h1 > h1:nth-child(3) {
+    font-size: 60px;
+  }
+}
+@media (max-width: 500px) {
+  .intro-div .img-div {
+    width: 80%;
+    height: 300px;
+  }
+  .intro-div .text .intro-name-div h1,
+  .intro-div .text .intro-name-div .name-absolute {
+    font-size: 35px;
+  }
+}
+@media (max-width: 400px) {
+  .intro-img-overlay {
+    background-color: transparent;
+  }
+  .intro-div .img-div {
+    width: 90%;
+    height: 300px;
+  }
+  .intro-div .text > h1:nth-child(1) {
+    font-size: 50px;
+    margin-bottom: 0px;
+  }
+  .intro-div .text > h1:nth-child(2) {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .intro-div .text > h1:nth-child(3) {
+    font-size: 40px;
+  }
+}
+@media (max-width: 320px) {
+  .intro-div .img-div {
+    width: 100%;
+    height: 250px;
+  }
+  .parallel-effect-div {
+    background-position: 60% 30%;
+  }
+  .intro-div .text .intro-name-div h1,
+  .intro-div .text .intro-name-div .name-absolute {
+    font-size: 35px;
+  }
+  .intro-div .text .strikethrough-span {
+    width: 60%;
+    height: 5px;
+  }
+}

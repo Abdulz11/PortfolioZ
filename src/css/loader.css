@@ -15,7 +15,7 @@
 .main-loader .line-content {
   width: 0;
   z-index: -10;
-  height: 0.5rem;
+  height: 0.15rem;
   background-color: white;
   position: absolute;
   bottom: 0;

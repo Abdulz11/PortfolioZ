@@ -109,7 +109,7 @@ nav .nav-inner-container .link-container a {
 .main-loader .line-content {
   width: 0;
   z-index: -10;
-  height: 0.5rem;
+  height: 0.15rem;
   background-color: white;
   position: absolute;
   bottom: 0;
@@ -311,7 +311,7 @@ nav .nav-inner-container .link-container a {
   top: 50%;
   right: 50%;
   transform: translate(50%);
-  width: 60%;
+  width: 100%;
   height: 10px;
 }
 
@@ -397,12 +397,16 @@ nav .nav-inner-container .link-container a {
   }
   .intro-div .text .intro-name-div h1,
   .intro-div .text .intro-name-div .name-absolute {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 @media (max-width: 400px) {
   .intro-img-overlay {
     background-color: transparent;
+  }
+  .intro-div .text .strikethrough-span {
+    width: 100%;
+    height: 5px;
   }
   .intro-div .img-div {
     width: 90%;
@@ -431,10 +435,6 @@ nav .nav-inner-container .link-container a {
   .intro-div .text .intro-name-div h1,
   .intro-div .text .intro-name-div .name-absolute {
     font-size: 35px;
-  }
-  .intro-div .text .strikethrough-span {
-    width: 60%;
-    height: 5px;
   }
 }
 .about-section {
@@ -481,7 +481,6 @@ nav .nav-inner-container .link-container a {
 }
 @media (max-width: 400px) {
   .about-div .text p {
-    font-size: 15px;
     line-height: 48px;
   }
 }

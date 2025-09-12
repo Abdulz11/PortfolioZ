@@ -65,7 +65,7 @@
   position: absolute;
   top: 50%;
   right: 50%;
-  transform: translate(50%);
+  transform: translate(50%, -50%);
   width: 100%;
   height: 10px;
 }
@@ -150,7 +150,9 @@
     width: 80%;
     height: 300px;
   }
-  .intro-div .text .intro-name-div h1,
+  .intro-div .text .intro-name-div h1 {
+    font-size: 30px;
+  }
   .intro-div .text .intro-name-div .name-absolute {
     font-size: 40px;
   }

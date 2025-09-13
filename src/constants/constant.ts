@@ -5,13 +5,14 @@ import movieMadness from "../assets/appscreenshots/moviemadness.png";
 import hotWheels from "../assets/appscreenshots/carshowcase.png";
 import tetris from "../assets/appscreenshots/tetris.png";
 import elleskitchen from "../assets/appscreenshots/elleskitchen.png";
+import blogApp from "../assets/blogapp.png";
 
 export const skills = [
   "Html",
   "Css",
   "Zustand",
   "Bootsrap",
-  // "Material UI",
+  "Material UI",
   "Node",
   "Redux",
   "Nextjs",
@@ -43,6 +44,16 @@ export const projects = [
     img: movieBox,
   },
   {
+    name: "Blog app",
+    overview:
+      "Elevate your blogging experience with our innovative Blog App, designed to streamline content creation and engagement. This project features a sleek, intuitive interface that empowers users to easily publish, manage, and share their blog posts.",
+    links: {
+      live: "https://blog-app-flax-one-86.vercel.app/",
+      github: "https://github.com/Abdulz11/Blog-App",
+    },
+    img: blogApp,
+  },
+  {
     name: "Ocean",
     overview:
       "Embrace your creative side with our vibrant and inspiring Ocean Landing Page. This project captures the essence of freedom and artistic expression, featuring a visually captivating design that encourages users to explore and celebrate their unique creativity.",
@@ -72,11 +83,7 @@ export const projects = [
     },
     img: movieMadness,
   },
-  {
-    name: "Blog app",
-    overview:
-      "Elevate your blogging experience with our innovative Blog App, designed to streamline content creation and engagement. This project features a sleek, intuitive interface that empowers users to easily publish, manage, and share their blog posts.",
-  },
+
   {
     name: "Tetris",
     overview:

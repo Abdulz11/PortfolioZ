@@ -48,7 +48,7 @@ function Intro(props:{imageLoaded:boolean}) {
      )
     .from('.img-div',{opacity:0})
     .from('.img-div',{x:-500})
-    .from(['.text h1','.text span'],{stagger:0.4,x:1200})
+    .from(['.text h1','.text span'],{stagger:0.4,x:1500})
     .to('.intro-img-overlay',{width:0})
     .from('.intro-image',{scale:2},'<')
     .to('.intro-name-div',

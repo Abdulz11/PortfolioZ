@@ -1,0 +1,38 @@
+.skills-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 0 20px;
+  gap: 40px;
+}
+.skills-div h1 {
+  font-size: 60px;
+}
+.skills-div .banner-div {
+  border-top: 2px solid #83c4f2;
+  display: flex;
+  border-bottom: 2px solid white;
+  width: 95%;
+  overflow: hidden;
+}
+
+.skill-banner {
+  border: 2px solid #fff;
+  background-color: transparent;
+  padding: 20px;
+  display: flex;
+}
+.skill-banner span {
+  font-size: 50px;
+  display: inline-block;
+  white-space: nowrap;
+  color: #83c4f2;
+  margin: 0 20px;
+}
+
+@media (max-width: 320px) {
+  .skill-banner span {
+    font-size: 20px;
+  }
+}
